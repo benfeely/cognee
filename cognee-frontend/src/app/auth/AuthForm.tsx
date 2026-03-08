@@ -64,11 +64,11 @@ export default function AuthForm({
       <form onSubmit={signIn} className="flex flex-col gap-4">
         <label className="flex flex-col gap-1">
           Email address*
-          <Input type="email" name="email" required placeholder="Email address*" defaultValue="default_user@example.com" />
+          <Input type="email" name="email" required placeholder="Email address*" />
         </label>
         <label className="flex flex-col gap-1">
           Password*
-          <Input type="password" name="password" required placeholder="Password*" defaultValue="default_password" />
+          <Input type="password" name="password" required placeholder="Password*" />
         </label>
         <CTAButton className="mt-6 mb-2" type="submit">
           {submitButtonText}

@@ -1,1 +1,5 @@
-export { default } from "./SignUpPage";
+import { redirect } from "next/navigation";
+
+export default function SignUpPage() {
+  redirect("/auth/login");
+}

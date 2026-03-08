@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 
 import AuthForm from "../AuthForm";
@@ -20,11 +19,6 @@ export default function LoginPage() {
           formatPayload={formatPayload}
         />
 
-        <p className="text-center mt-2 text-sm">
-          <Link href="/auth/signup">
-            {"Or go to Sign up ->"}
-          </Link>
-        </p>
       </div>
     </div>
   );
