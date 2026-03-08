@@ -178,11 +178,12 @@ async def exception_handler(_: Request, exc: CogneeApiError) -> JSONResponse:
 
 app.include_router(get_auth_router(), prefix="/api/v1/auth", tags=["auth"])
 
-app.include_router(
-    get_register_router(),
-    prefix="/api/v1/auth",
-    tags=["auth"],
-)
+if os.getenv("DISABLE_REGISTRATION", "").lower() != "true":
+    app.include_router(
+        get_register_router(),
+        prefix="/api/v1/auth",
+        tags=["auth"],
+    )
 
 app.include_router(
     get_reset_password_router(),
